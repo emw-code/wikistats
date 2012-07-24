@@ -1,0 +1,54 @@
+body {
+		font-family: Arial;
+}
+
+button {
+	outline: none;
+}
+
+/* Firefox button have an unsightly dotted box upon activation.  This hides it.  */
+button::-moz-focus-inner { border: 0; }
+
+/* The 'interstitial screen' puts a translucent shade over the plot area while data is being fetched.*/
+#interstitial_screen {
+	position:relative;
+	left: 29px; 
+	top:-334px; 
+	background: rgb(255,255,255) url('waiting.gif') no-repeat 98% 2%; 
+	opacity:0.4; 
+	filter:alpha(opacity=40);	
+	width: 665px; 
+	height:327px;
+}
+
+#p1 {
+	position: relative;
+	left: 11px;
+	margin-right: 11px;
+}
+
+#from {
+	position: relative;
+	left: 10px;
+	margin-right: 10px;
+}
+
+.legend table {
+	border: 1px solid black;
+}
+
+.legend table td, .legend table th {
+	text-align: center;
+	padding-left: 7px;
+	padding-right: 7px;
+	padding-bottom: 3px;
+	border: 0.25px solid rgb(180,180,180);
+}
+
+.legend table tbody {
+	background: rgb(248,248,248);
+}
+
+.legend table tbody tr:hover {
+	background: rgb(235,235,235);
+}

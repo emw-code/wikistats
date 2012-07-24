@@ -380,7 +380,7 @@ class Wikistats extends Controller {
 		if (sizeof($nonexistent_pages) == 0){
 			$json .= ' "nonexistent_pages": [], ';
 		} else {
-			$json .= ' "nonexistent_pages": ["';
+			$json .= ' "nonexistent_pages": [';
 			
 			
 			foreach($nonexistent_pages as $project => $page){
@@ -389,7 +389,7 @@ class Wikistats extends Controller {
 			
 			// Remove last character (a comma) from nonexistent_pages
 			$json = substr($json,0,-4); 
-			$json .= "'], ";
+			$json .= "], ";
 		}
 		//$json .= " nonexistent_pages: '" .  implode(', ', $nonexistent_pages) . "', ";
 		//print_r($existing_pages);

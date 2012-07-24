@@ -73,7 +73,7 @@ def get_page_views_json(project, page, year, month):
 	#page = urllib.quote(page)
 	
 	# Example request: http://stats.grok.se/json/en/201201/DNA
-	req = urllib2.Request('http://stats.grok.se/json/' + project + '/' + year + month + '/' + page)
+	req = urllib2.Request('http://stats-classic.grok.se/json/' + project + '/' + year + month + '/' + page)
 	
 	try:
 		r = opener.open(req)
@@ -86,7 +86,18 @@ def get_page_views_json(project, page, year, month):
 	#print "Time to fetch JSON for " + page +", " + month + "/" + year + ": " + str(time.time() - http_init_time) + " seconds"
 	json_time.append([time.time() - http_init_time])
 	
-	return jsonData["daily_views"]
+	number_of_days_in_month = calendar.monthrange(int(year), int(month))[1]
+	
+	daily_views = jsonData["daily_views"]
+	
+	# The JSON API at http://stats-classic.grok.se has a bug in which most
+	# months' "daily_views" array begins with a 0.  The snippet below patches that.
+	# See http://en.wikipedia.org/w/index.php?title=User_talk:Henrik&oldid=503631137#Bugs_in_legacy_JSON_API_at_http:.2F.2Fstats-classic.grok.se.
+	if (len(daily_views) > number_of_days_in_month):
+		if daily_views[0] == 0:
+			daily_views = daily_views[1:]
+	
+	return daily_views
 
 
 # Formats data returned from get_page_views_json so that it can be inserted into the database.

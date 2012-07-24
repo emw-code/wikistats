@@ -30,9 +30,8 @@ This site does not degrade gracefully for users without Javascript.
 	
 	<!-- wikistats.js contains the bulk of code responsible for the behavior of this tool -->
 	<script type="text/javascript" src="http://toolserver.org/~emw/js/datepicker.js"></script>
-	<script type="text/javascript" src="http://toolserver.org/~emw/js/comma.js"></script>
+	<script type="text/javascript" src="http://toolserver.org/~emw/js/utilities.js"></script>
 	<script type="text/javascript" src="http://toolserver.org/~emw/js/wikistats.js"></script>
-	<script type="text/javascript" src="http://toolserver.org/~emw/js/buttons.js"></script>
  </head>
     <body>
     <div id="header">Wikipedia article traffic statistics <span style="font-size: 14px;">(alpha)</span>
@@ -82,7 +81,13 @@ This site does not degrade gracefully for users without Javascript.
 		</span>
 	</div>
 
-	<div id="attribution" style="position:absolute; top:520px; font-size: 12px;">Page view data taken from <a href="http://stats.grok.se/en/201003/Main_Page">Henrik's tool</a>.  Send any comments or questions to <a href="http://en.wikipedia.org/wiki/User:Emw">User:Emw</a>.
+	<div id="attribution" style="position:absolute; top:520px; font-size: 12px;">
+		Page view data taken from <a href="http://stats.grok.se/en/201003/Main_Page">Henrik's tool</a>.  Send any comments or questions to <a href="http://en.wikipedia.org/wiki/User:Emw">User:Emw</a>.  Source code available <a href="https://github.com/emw-code/wikistats">here</a>.
+		<p>
+		Graphs licensed under <a href="http://creativecommons.org/licenses/by-sa/3.0/deed.en">CC-BY-SA 3.0</a>.
+		</p>
+	</div>
+	
 
  </body>
 </html>
