@@ -18,7 +18,7 @@ This project augments the popular tool at stats.grok.se in a few ways:
     French and German Wikipedias).
 3.  Summary statistics like the number of days plotted, total views, average number of views, and standard deviation are shown for all
     plots.  These statistics can be plotted for each graph by double-clicking on the plot's respective row in the legend.
-4.  The cause of traffic spikes (e.g. http://toolserver.org/~emw/?project1=en&page1=Michael_Jackson) is inferred by analyzing metadata about the
-    subject (e.g. from infoboxes) and searching for links to the subject on Wikipedia's main page on the dates around the traffic spike.  The inferred cause
-    of any spikes is displayed in the plotted data.
+4.  The cause of traffic spikes (e.g. for the article on [Michael Jackson](http://toolserver.org/~emw/wikistats/?p1=Michael_Jackson&project1=en&from=12/10/2007&to=7/23/2012&plot=1)) 
+    is inferred by analyzing metadata about the subject (e.g. from infoboxes) and searching for links to the subject on Wikipedia's main 
+    page on the dates around the traffic spike.  The inferred cause of any spikes is displayed in the plotted data.
 5.  The raw data is available as A) a pre-formatted, sortable HTML table, B) a CSV file or C) over a JSON API.
