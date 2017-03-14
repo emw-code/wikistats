@@ -1,7 +1,7 @@
-[Wikistats](http://toolserver.org/~emw/wikistats/) - Wikipedia article traffic statistics
+Wikistats - Wikipedia article traffic statistics
 ================================================================
 
-Wikistats is a tool to visualize how viewership of Wikipedia articles has changed over time.
+Wikistats is a tool to visualize how viewership of Wikipedia articles has changed over time.  It ran on http://toolserver.org/~emw/wikistats/, but is now decommissioned.  This repository archives the tool's source code.
 
 It uses [flot](http://code.google.com/p/flot/) to plot page view data for individual Wikipedia articles.  The underlying data is from 
 the [stats.grok.se](http://stats.grok.se) tool created by Wikipedia user [Henrik](http://en.wikipedia.org/wiki/User:Henrik), and that 
